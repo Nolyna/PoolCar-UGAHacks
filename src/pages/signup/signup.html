@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Signup
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+  <img src="assets/img/hawTERBZTiyfUXpucHlp_legs-car.jpeg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+  <form id="signup-form2">
+    <ion-list id="signup-list3">
+      <ion-item id="signup-input4">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input type="email" placeholder="" name="email" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+      <ion-item id="signup-input5">
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input type="text" placeholder="" name="password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-item id="signup-radio6">
+      <ion-label>
+        Are you:
+      </ion-label>
+      <ion-radio name="type"></ion-radio>
+    </ion-item>
+    <button id="signup-button3" ion-button color="stable" block on-click="register(user)">
+      Sign up
+    </button>
+    <button id="signup-button5" ion-button clear color="positive" block on-click="goToLogin()">
+      Or log in
+    </button>
+  </form>
+</ion-content>

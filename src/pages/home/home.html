@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      PoolCar
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1" style="background-color:default;">
+  <form id="home-form7">
+    <ion-searchbar placeholder="" name="" id="home-search2"></ion-searchbar>
+  </form>
+
+  <div class="spacer" style="width:300px;height:49px;" id="home-spacer2"></div>
+  <div *ngIf = "lists.length == 0">
+      <p padding> There is no request. Please come back later.</p>
+    </div>
+
+
+  <ion-list id="home-list5">
+    <ng-container *ngFor = "let element of lists">
+
+      <!--ion-item *ngIf = "element.type == 'driver'" color="royal" id="home-list-item">
+      <ion-item *ngIf = "element.type == 'rider'" color="energized" id="home-list-item"-->
+      <ion-item color="energized" id="home-list-item">
+        <ion-avatar item-left>
+          <img src="assets/img/ninja.png" />
+        </ion-avatar>
+        <h2>
+          {{element.name}}
+          <ion-icon *ngIf = "element.type == 'driver'" name="car"></ion-icon>
+          <ion-icon *ngIf = "element.type == 'rider'" name="walk"></ion-icon>
+
+        </h2>
+        <p>Date: {{element.date}} <br/>
+          Arrival City: {{element.arc}}   Zip Code:{{element.arzc}}<br/>
+          Departure City: {{element.dpc}}   Zip Code:{{element.dpzc}}</p>
+        </ion-item >
+      <!--/ion-item *ngIf = "element.type == rider" >
+      </ion-item *ngIf = "element.type == driver"-->
+
+    </ng-container>
+
+  </ion-list>
+</ion-content>

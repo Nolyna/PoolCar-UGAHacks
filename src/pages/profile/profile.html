@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <img src="assets/img/wZ5J3OCjRLFYsadL0JQw_user.svg" style="display:block;width:30%;height:auto;margin-left:auto;margin-right:auto;" />
+  <ion-list id="profile-list9">
+    <ion-item id="profile-input6">
+      <ion-label stacked>
+        Name
+      </ion-label>
+      <ion-input type="text" placeholder="{{name}}" name="name"> {{ name }}</ion-input>
+    </ion-item>
+    <ion-item id="profile-input7">
+      <ion-label stacked>
+        Email
+      </ion-label>
+      <ion-input type="text" name="email" placeholder="{{email}}"> {{ email }}</ion-input>
+    </ion-item>
+    <ion-item id="profile-input8">
+      <ion-label stacked>
+        Phone
+      </ion-label>
+      <ion-input type="text" name="phone" placeholder="4679982734"> {{ phone}} </ion-input>
+    </ion-item>
+    <ion-item id="profile-input12">
+      <ion-label stacked>
+        Password
+      </ion-label>
+      <ion-input type="password" name="password" placeholder="*********"> *********</ion-input>
+    </ion-item>
+  </ion-list>
+  <button *ngIf = "type == 'driver'" id="profile-button8" ion-button color="positive" block on-click="goToDriverDetails()">
+    Next
+  </button>
+</ion-content>
