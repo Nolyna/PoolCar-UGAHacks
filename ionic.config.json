@@ -1,0 +1,8 @@
+{
+  "name": "poolcar",
+  "app_id": "ef927b01",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

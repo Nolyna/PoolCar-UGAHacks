@@ -1,0 +1,33 @@
+<ion-menu [content]="mainContent">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Menu
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content id="side-menu21">
+    <ion-list id="menu-list1">
+      <ion-item color="none" menuClose="" on-click="goToProfile()" id="menu-list-item1">
+        Profile
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToPlanning()" id="menu-list-item5">
+        Plan trip
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToMessage()" id="menu-list-item6">
+        Messages
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToHistory()" id="menu-list-item4">
+        History
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToHelp()" id="menu-list-item2">
+        Help
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToSettings()" id="menu-list-item3">
+        Settings
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mainContent [root]="rootPage"></ion-nav>
