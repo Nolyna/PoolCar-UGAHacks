@@ -1,18 +1,28 @@
 <ion-menu [content]="mainContent">
   <ion-header>
     <ion-toolbar>
-      <ion-title>
+      <ion-title *ngIf="!name; then logout">
         Menu
       </ion-title>
+      <ng-template #logout>Hi {{name}}</ng-template>
     </ion-toolbar>
   </ion-header>
   <ion-content id="side-menu21">
     <ion-list id="menu-list1">
+      <ion-item color="none" menuClose="" on-click="goToHome()" id="menu-list-item7">
+        Home
+      </ion-item>
       <ion-item color="none" menuClose="" on-click="goToProfile()" id="menu-list-item1">
         Profile
       </ion-item>
       <ion-item color="none" menuClose="" on-click="goToPlanning()" id="menu-list-item5">
         Plan trip
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToTrip()" id="menu-list-item5">
+        Trip
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToMatching()" id="menu-list-item5">
+        Match
       </ion-item>
       <ion-item color="none" menuClose="" on-click="goToMessage()" id="menu-list-item6">
         Messages

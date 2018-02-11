@@ -4,17 +4,19 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      Planning
+      Plan Your trip
     </ion-title>
   </ion-navbar>
 </ion-header>
+
 <ion-content padding id="page3">
+
   <form id="planning-form6">
     <ion-item id="planning-input26">
       <ion-label stacked>
         Departure Date
       </ion-label>
-      <ion-input type="date" placeholder=""></ion-input>
+      <ion-input type="date" placeholder="" name="datesplan" [(ngModel)]="req.datesplan"></ion-input>
     </ion-item>
     <ion-item-divider color="light" id="planning-list-item-divider2">
       Departure
@@ -23,13 +25,13 @@
       <ion-label>
         City
       </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
+      <ion-input type="text" placeholder="" name="departCity" [(ngModel)]="req.departCity"></ion-input>
     </ion-item>
     <ion-item id="planning-input30">
       <ion-label>
         Zip Code
       </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
+      <ion-input type="text" placeholder="" name="departZip" [(ngModel)]="req.departZip"></ion-input>
     </ion-item>
     <ion-item-divider color="light" id="planning-list-item-divider1">
       Destination
@@ -38,15 +40,15 @@
       <ion-label>
         City
       </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
+      <ion-input type="text" placeholder="" name="arrivalCity" [(ngModel)]="req.arrivalCity"></ion-input>
     </ion-item>
     <ion-item id="planning-input32">
       <ion-label>
         Zip Code
       </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
+      <ion-input type="text" placeholder="" name="arrivalZip" [(ngModel)]="req.arrivalZip"></ion-input>
     </ion-item>
-    <button id="planning-button12" ion-button color="positive" block>
+    <button id="planning-button12" ion-button color="positive" block on-click="writeRequete(req)">
       Submit
     </button>
   </form>

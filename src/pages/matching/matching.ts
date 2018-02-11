@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-//import { SignupPage } from '../signup/signup';
-import { HomePage } from '../home/home';
+import { SignupPage } from '../signup/signup';
 import { ProfilePage } from '../profile/profile';
 import { DriverDetailsPage } from '../driver-details/driver-details';
+import { HomePage } from '../home/home';
 
 @Component({
-  selector: 'page-signup',
-  templateUrl: 'signup.html'
+  selector: 'page-matching',
+  templateUrl: 'matching.html'
 })
-export class SignupPage {
+export class MatchingPage {
 
   constructor(public navCtrl: NavController) {
   }
@@ -20,14 +20,14 @@ export class SignupPage {
   }goToSignup(params){
     if (!params) params = {};
     this.navCtrl.push(SignupPage);
-  }goToHome(params){
-    if (!params) params = {};
-    this.navCtrl.push(HomePage);
   }goToProfile(params){
     if (!params) params = {};
     this.navCtrl.push(ProfilePage);
   }goToDriverDetails(params){
     if (!params) params = {};
     this.navCtrl.push(DriverDetailsPage);
+  }goToHome(params){
+    if (!params) params = {};
+    this.navCtrl.push(HomePage);
   }
 }

@@ -16,14 +16,23 @@ import { PasswordUpdatePage } from '../pages/password-update/password-update';
 import { HistoryPage } from '../pages/history/history';
 import { HelpPage } from '../pages/help/help';
 import { SettingsPage } from '../pages/settings/settings';
+import { MatchingPage } from '../pages/matching/matching';
 import { MessagePage } from '../pages/message/message';
 import { StartTripPage } from '../pages/start-trip/start-trip';
 import { EndTripPage } from '../pages/end-trip/end-trip';
 import { EndTrip2Page } from '../pages/end-trip2/end-trip2';
-
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+//add
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+//added
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+//addded 2
+import { AngularFireAuthModule } from 'angularfire2/auth'
+//import { FIREBASE_CREDENTIALS } from "./firebase.credentials";
+
 
 @NgModule({
   declarations: [
@@ -42,6 +51,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HistoryPage,
     HelpPage,
     SettingsPage,
+    MatchingPage,
     MessagePage,
     StartTripPage,
     EndTripPage,
@@ -49,7 +59,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -68,6 +82,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HistoryPage,
     HelpPage,
     SettingsPage,
+    MatchingPage,
     MessagePage,
     StartTripPage,
     EndTripPage,

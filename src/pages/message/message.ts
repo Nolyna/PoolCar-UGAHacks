@@ -6,8 +6,9 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'message.html'
 })
 export class MessagePage {
-
+UID: any;
   constructor(public navCtrl: NavController) {
+    this.UID = localStorage.getItem('uid');
   }
-  
+
 }
